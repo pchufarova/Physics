@@ -24,17 +24,23 @@ delta = sigma * k_st
 
 max_density = 1 / (sigma * (2 * pi)**(1/2)) #максимальная плотность распределения
 
-# print("среднее " + str(average))
-# print("сигма (среднеквадратичное) " + str(sigma))
-# print("дельта (t) " + str(delta))
+print("среднее " + str(average))
+print("сигма (среднеквадратичное) " + str(sigma))
+print("дельта (t) " + str(delta))
+print(max(mas), min(mas))
+print((max(mas) - min(mas))/1000)
 
 
 # ГИСТОГРАММА
-
-# Ваш массив данныхdata = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+m = int(N**(1/2))
+print(m)
 # Построение гистограммы
-plt.hist(data, bins=range(min(data), max(data) + 1), edgecolor='black', alpha=0.7)
-# Добавление заголовка и меток осейplt.title('Гистограмма данных')
-plt.xlabel('Значение')plt.ylabel('Частота')
+plt.hist(mas, bins=m, edgecolor='black', alpha=0.7)
+# Добавление заголовка и меток осей
+plt.title('Гистограмма данных')
+plt.xlabel('Значение')
+plt.ylabel('Частота')
 # Отображение гистограммы
 plt.show()
+
+
